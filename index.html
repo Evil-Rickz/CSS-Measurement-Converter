@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <title>CSS Measurement Converter</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="nav_container" id="nav-container">
+        <a href="index.html" class="nav_logo">
+            <img src="media/css-converter-logo.svg" alt="Logo">
+        </a>
+         
+        <div class="dark_mode">
+            <i class="uil uil-moon dark_mode-icon change-theme" id="theme-button"></i>
+            <!--<i class="uil uil-sun"></i>-->
+        </div>
+         
+        <div class="nav_btns">
+            <div class="nav_toggle" id="nav-toggle">
+                <i class="uil uil-apps"></i>
+            </div>
+            
+            <div class="nav_close hide-menu" id="nav-close">
+                <i class="uil uil-times" ></i>
+            </div>
+        </div>  
+    </div>
+
+    <div class="nav_menu hide-menu" id="nav-menu">
+        <ul class="nav_list grid">
+            <li class="nav_item">
+                <a href="#home" class="nav_link">
+                    <i class="uil uil-estate nav_icon"></i> Home
+                </a> 
+            </li>
+            
+            <li class="nav_item">
+                <a href="#historic" class="nav_link">
+                    <i class="uil uil-history nav_icon"></i> Historic
+                </a>
+            </li>
+
+            <li class="nav_item">
+              <a href="#about" class="nav_link">
+                  <i class="uil uil-about nav_icon"></i> About
+              </a>
+          </li>
+
+          <li class="nav_item">
+            <a href="#feedback" class="nav_link">
+                <i class="uil uil-feedback nav_icon"></i> Feedback
+            </a>
+        </li>
+        </ul>
+    </div>
+</nav>
+
+  <body>
+    <!-- create the main content -->
+    <section id="home">
+      <h1>CSS Measurement Converter</h1>
+
+      <form id="conversion-form">
+        <label for="input-value">Value:</label><br>
+
+        <input type="text" id="input-value" name="input-value" placeholder="Type a Value"><br>
+        
+        <div class="units-inputs">
+          <label for="input-unit">Unit:</label><br>
+          
+          <select id="input-unit" name="input-unit">
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="rem">rem</option>
+          </select>
+
+          <label for="output-unit">Convert to:</label><br>
+          
+          <select id="output-unit" name="output-unit">
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="rem">rem</option>
+          </select>
+        </div>
+
+        <button type="submit">Convert</button>
+      </form>
+      
+      <h2 id="output"></h2>
+    </section>
+
+    <section id="history" style="display: none;">
+      <h1>Conversion History</h1>
+      <div id="history-output"></div>
+    </section>
+
+    <section id="about" style="display: none;">
+      <h1>About Us</h1>
+      <p>
+        We are a team of developers who are passionate about helping people
+        convert measurements in CSS. Our app is designed to be easy to use and
+        accurate, and we hope it will be a valuable tool for web developers
+        everywhere.
+      </p>
+    </section>
+
+    <section id="feedback" style="display: none;">
+      <h1>Feedback</h1>
+      <p>
+        We appreciate your feedback about our app. If you have any comments,
+        suggestions, or ideas for improvement, please send us an email at
+        feedback@measurementconverter.com.
+      </p>
+      <form id="feedback-form">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <br>
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+        <br>
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments"></textarea><br>
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
